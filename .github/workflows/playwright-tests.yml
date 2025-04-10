@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  # Checkout the code from repository
+        uses: actions/checkout@v4  # Checkout the code from repository
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '16'  # version of Node.js using
 
@@ -31,7 +31,7 @@ jobs:
           npx playwright test  # Run playwright test
 
       - name: Upload HTML report as artifact
-        uses: actions/upload-artifact@v2  # Use v2 of this action
+        uses: actions/upload-artifact@v4  
         with:
           name: playwright-report  # Artifact name
           path: playwright-report/  # Path where artifact will be stored
