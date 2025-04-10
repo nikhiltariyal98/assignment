@@ -1,0 +1,7 @@
+[
+    {
+      "email": "valid@example.com",
+      "password": "ValidPass123",
+      "expectedMessage": "Your email and/or password are incorrects"
+    }
+]
