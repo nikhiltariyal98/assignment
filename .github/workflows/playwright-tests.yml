@@ -31,7 +31,7 @@ jobs:
           npx playwright test  # Run playwright test
 
       - name: Upload HTML report as artifact
-        uses: actions/upload-artifact@v3.1.3
+        uses: actions/upload-artifact@v2  # Use v2 of this action
         with:
           name: playwright-report  # Artifact name
           path: playwright-report/  # Path where artifact will be stored
