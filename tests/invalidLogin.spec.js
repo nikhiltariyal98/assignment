@@ -1,9 +1,11 @@
 import {test,expect} from '@playwright/test'
 const fs = require('fs');
+const path = require('path');
 
 test('Invalid Login And Mandatory Field Check', async ({page})=>
 {
-    const loginData = JSON.parse(fs.readFileSync('/Users/parvesh/Desktop/Assignment/Tests/loginData.json','utf-8'));
+    const loginDataPath = path.join(__dirname, 'loginData.json');
+    const loginData = JSON.parse(fs.readFileSync(loginDataPath,'utf-8'));
     const userName = "input[autocomplete = 'username']";
     const login = 'button[type="submit"] span';
     const mandatoryMessage = "//*[text()='Required']";
